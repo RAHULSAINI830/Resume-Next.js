@@ -28,6 +28,9 @@
     "test:watch": "bun test --watch",
     "types": "tsc -p tsconfig.json --noEmit"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.5.1",
     "@fortawesome/free-brands-svg-icons": "6.5.1",
