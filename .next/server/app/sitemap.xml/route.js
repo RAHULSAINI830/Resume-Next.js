@@ -1,81 +1,12 @@
-'use strict';
-(() => {
-  var e = {};
-  (e.id = 717),
-    (e.ids = [717]),
-    (e.modules = {
-      517: (e) => {
-        e.exports = require('next/dist/compiled/next-server/app-route.runtime.prod.js');
-      },
-      5273: (e, t, a) => {
-        a.r(t),
-          a.d(t, {
-            headerHooks: () => f,
-            originalPathname: () => R,
-            requestAsyncStorage: () => _,
-            routeModule: () => x,
-            serverHooks: () => g,
-            staticGenerationAsyncStorage: () => v,
-            staticGenerationBailout: () => w,
-          });
-        var r = {};
-        a.r(r), a.d(r, { default: () => sitemap });
-        var s = {};
-        a.r(s), a.d(s, { GET: () => GET });
-        var i = a(884),
-          n = a(6132),
-          o = a(1057);
-        let u = process.env.NEXT_PUBLIC_VERCEL_URL,
-          p = `https://${u}`;
-        function sitemap() {
-          return [{ url: p, lastModified: new Date().toISOString() }];
-        }
-        var l = a(2450);
-        let m = { ...r },
-          d = m.default,
-          c = m.generateSitemaps;
-        async function GET(e, t) {
-          let a;
-          let { __metadata_id__: r = [], ...s } = t.params || {},
-            i = r[0],
-            n = c ? await c() : null;
-          if (n && null == (a = n.find((e) => e.id.toString() === i)?.id))
-            return new o.NextResponse('Not Found', { status: 404 });
-          let u = await d({ id: a }),
-            p = (0, l.resolveRouteData)(u, 'sitemap');
-          return new o.NextResponse(p, {
-            headers: {
-              'Content-Type': 'application/xml',
-              'Cache-Control': 'public, max-age=0, must-revalidate',
-            },
-          });
-        }
-        let x = new i.AppRouteRouteModule({
-            definition: {
-              kind: n.x.APP_ROUTE,
-              page: '/sitemap.xml/route',
-              pathname: '/sitemap.xml',
-              filename: 'sitemap',
-              bundlePath: 'app/sitemap.xml/route',
-            },
-            resolvedPagePath:
-              'next-metadata-route-loader?page=%2Fsitemap.xml%2Froute&isDynamic=1!/workspaces/Resume-Next.js/src/app/sitemap.ts?__next_metadata_route__',
-            nextConfigOutput: '',
-            userland: s,
-          }),
-          {
-            requestAsyncStorage: _,
-            staticGenerationAsyncStorage: v,
-            serverHooks: g,
-            headerHooks: f,
-            staticGenerationBailout: w,
-          } = x,
-          R = '/sitemap.xml/route';
-      },
-    });
-  var t = require('../../webpack-runtime.js');
-  t.C(e);
-  var __webpack_exec__ = (e) => t((t.s = e)),
-    a = t.X(0, [705, 495], () => __webpack_exec__(5273));
-  module.exports = a;
-})();
+"use strict";(()=>{var e={};e.id=717,e.ids=[717],e.modules={517:e=>{e.exports=require("next/dist/compiled/next-server/app-route.runtime.prod.js")},6204:(e,t,r)=>{r.r(t),r.d(t,{headerHooks:()=>A,originalPathname:()=>F,patchFetch:()=>b,requestAsyncStorage:()=>h,routeModule:()=>g,serverHooks:()=>w,staticGenerationAsyncStorage:()=>x,staticGenerationBailout:()=>_});var n={};r.r(n),r.d(n,{default:()=>p});var a={};r.r(a),r.d(a,{GET:()=>v});var o=r(5419),i=r(9108),s=r(9678),l=r(2611);let u=process.env.NEXT_PUBLIC_VERCEL_URL,f=`https://${u}`;function p(){return[{url:f,lastModified:new Date().toISOString()}]}var c=r(7252);let d={...n},m=d.default,y=d.generateSitemaps;if("function"!=typeof m)throw Error('Default export is missing in "/workspaces/Resume-Next.js/src/app/sitemap.ts"');async function v(e,t){let r;let{__metadata_id__:n,...a}=t.params||{},o=y?await y():null;if(o&&null==(r=o.find(e=>{let t=e.id.toString();return(t+=".xml")===n})?.id))return new l.NextResponse("Not Found",{status:404});let i=await m({id:r}),s=(0,c.resolveRouteData)(i,"sitemap");return new l.NextResponse(s,{headers:{"Content-Type":"application/xml","Cache-Control":"public, max-age=0, must-revalidate"}})}let g=new o.AppRouteRouteModule({definition:{kind:i.x.APP_ROUTE,page:"/sitemap.xml/route",pathname:"/sitemap.xml",filename:"sitemap",bundlePath:"app/sitemap.xml/route"},resolvedPagePath:"next-metadata-route-loader?page=%2Fsitemap.xml%2Froute&filePath=%2Fworkspaces%2FResume-Next.js%2Fsrc%2Fapp%2Fsitemap.ts&isDynamic=1!?__next_metadata_route__",nextConfigOutput:"",userland:a}),{requestAsyncStorage:h,staticGenerationAsyncStorage:x,serverHooks:w,headerHooks:A,staticGenerationBailout:_}=g,F="/sitemap.xml/route";function b(){return(0,s.patchFetch)({serverHooks:w,staticGenerationAsyncStorage:x})}},7252:(e,t,r)=>{Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]})}(t,{resolveRobots:function(){return a},resolveSitemap:function(){return o},resolveManifest:function(){return i},resolveRouteData:function(){return s}});let n=r(9926);function a(e){let t="";for(let r of Array.isArray(e.rules)?e.rules:[e.rules]){for(let e of(0,n.resolveArray)(r.userAgent||["*"]))t+=`User-Agent: ${e}
+`;if(r.allow)for(let e of(0,n.resolveArray)(r.allow))t+=`Allow: ${e}
+`;if(r.disallow)for(let e of(0,n.resolveArray)(r.disallow))t+=`Disallow: ${e}
+`;r.crawlDelay&&(t+=`Crawl-delay: ${r.crawlDelay}
+`),t+="\n"}return e.host&&(t+=`Host: ${e.host}
+`),e.sitemap&&(0,n.resolveArray)(e.sitemap).forEach(e=>{t+=`Sitemap: ${e}
+`}),t}function o(e){let t="";for(let r of(t+='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n',e)){if(t+=`<url>
+<loc>${r.url}</loc>
+`,r.lastModified){let e=r.lastModified instanceof Date?r.lastModified.toISOString():r.lastModified;t+=`<lastmod>${e}</lastmod>
+`}r.changeFrequency&&(t+=`<changefreq>${r.changeFrequency}</changefreq>
+`),"number"==typeof r.priority&&(t+=`<priority>${r.priority}</priority>
+`),t+="</url>\n"}return t+"</urlset>\n"}function i(e){return JSON.stringify(e)}function s(e,t){return"robots"===t?a(e):"sitemap"===t?o(e):"manifest"===t?i(e):""}},9926:(e,t)=>{function r(e){return Array.isArray(e)?e:[e]}function n(e){if(null!=e)return r(e)}Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]})}(t,{resolveAsArrayOrUndefined:function(){return n},resolveArray:function(){return r}})}};var t=require("../../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),n=t.X(0,[638,5],()=>r(6204));module.exports=n})();
