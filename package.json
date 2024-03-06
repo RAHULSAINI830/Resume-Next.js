@@ -29,7 +29,7 @@
     "types": "tsc -p tsconfig.json --noEmit"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.5.1",
