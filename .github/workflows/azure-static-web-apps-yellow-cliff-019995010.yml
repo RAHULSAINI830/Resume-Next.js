@@ -21,9 +21,10 @@ jobs:
           lfs: false
       - name: Install Dependencies
         run: npm install --force
+   
+      - name: Build And Deploy
         env:
           SKIP_NPM_INSTALL: true
-      - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
