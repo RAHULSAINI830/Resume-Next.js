@@ -12,7 +12,7 @@
 
   "scripts": {
  
-    "build": "next build",
+    "build": "npx -p node@18.17.0 NODE_OPTIONS=--max_old_space_size=4096 next build",
     "build:content": "contentlayer build",
     "dev": "next dev",
     "format": "prettier --write 'src/**/*.{json,js,ts,tsx}'",
@@ -26,7 +26,7 @@
     "types": "tsc -p tsconfig.json --noEmit"
   },
   "engines": {
-    "node": ">=18.17.0"
+    "node": "18.17.0"
   },
   
   "dependencies": {
