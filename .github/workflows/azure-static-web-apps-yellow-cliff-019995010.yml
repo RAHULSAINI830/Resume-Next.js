@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18.17.0'  
+          node-version: '18'  
       - uses: actions/checkout@v1
         with:
           submodules: true
@@ -27,6 +27,8 @@ jobs:
         run: npm install --legacy-peer-deps
       - name: Disable  CI  
         run:  echo  "CI=false" >> $GITHUB_ENV
+      - name: Set Temporary Git Configuration
+        run: git config --global http.https://github.com/.extraheader ""
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
