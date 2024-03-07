@@ -17,6 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
+          node-version : '18.17.0'
           submodules: true
           lfs: false
       - name: Install Dependencies
